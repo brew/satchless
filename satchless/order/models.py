@@ -1,6 +1,6 @@
 import datetime
 from django.conf import settings
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django_prices.models import PriceField
@@ -46,7 +46,7 @@ class Order(models.Model, ItemSet):
                                    editable=False, blank=True)
     last_status_change = models.DateTimeField(default=datetime.datetime.now,
                                               editable=False, blank=True)
-    user = models.ForeignKey(User, blank=True, null=True, related_name='+')
+    user = models.ForeignKey(settings.AUTH_USER_MODEL, blank=True, null=True, related_name='+')
     billing_first_name = models.CharField(_("first name"),
                                           max_length=256, blank=True)
     billing_last_name = models.CharField(_("last name"),

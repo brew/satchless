@@ -3,7 +3,7 @@ from decimal import Decimal
 from collections import namedtuple
 from django.conf import settings
 from django.db import models
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 from django.utils.translation import ugettext_lazy as _
 from django.core.exceptions import ObjectDoesNotExist
 import random
@@ -23,7 +23,7 @@ QuantityResult = namedtuple('QuantityResult', ['cart_item', 'new_quantity',
 
 class Cart(models.Model, ItemSet):
 
-    owner = models.ForeignKey(User, null=True, blank=True, related_name='+')
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, null=True, blank=True, related_name='+')
     currency = models.CharField(_("currency"), max_length=3,
                                 default=get_default_currency)
     token = models.CharField(max_length=32, blank=True, default='')
