@@ -44,15 +44,15 @@ class PaymentQueue(PaymentProvider, QueueHandler):
         provider = self._get_provider(order, typ)
         return provider.get_configuration_form(order=order, data=data, typ=typ)
 
-    def save(self, order, form, typ=None):
+    def save(self, order, form, typ=None, **kwargs):
         typ = typ or order.payment_type
         provider = self._get_provider(order, typ)
-        return provider.save(order=order, form=form, typ=typ)
+        return provider.save(order=order, form=form, typ=typ, **kwargs)
 
-    def confirm(self, order, typ=None):
+    def confirm(self, order, typ=None, **kwargs):
         typ = typ or order.payment_type
         provider = self._get_provider(order, typ)
-        return provider.confirm(order=order, typ=typ)
+        return provider.confirm(order=order, typ=typ, **kwargs)
 
 
 ### DELIVERY PROVIDERS
