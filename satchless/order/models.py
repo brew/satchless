@@ -160,10 +160,9 @@ class DeliveryGroup(models.Model, ItemSet):
     delivery_price = PriceField(_('unit price'),
                                 currency=settings.SATCHLESS_DEFAULT_CURRENCY,
                                 max_digits=12, decimal_places=4,
-                                default=0, editable=False)
+                                default=0)
     delivery_type = models.CharField(max_length=256, blank=True)
-    delivery_type_name = models.CharField(_('name'), max_length=128, blank=True,
-                                          editable=False)
+    delivery_type_name = models.CharField(_('name'), max_length=128, blank=True,)
     delivery_type_description = models.TextField(_('description'), blank=True,
                                                  editable=False)
     require_shipping_address = models.BooleanField(default=False, editable=False)
