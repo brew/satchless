@@ -108,10 +108,6 @@ class Order(models.Model, ItemSet):
                     break
         return super(Order, self).save(*args, **kwargs)
 
-    @property
-    def billing_full_name(self):
-        return u'%s %s' % (self.billing_first_name, self.billing_last_name)
-
     def set_status(self, new_status):
         old_status = self.status
         self.status = new_status
