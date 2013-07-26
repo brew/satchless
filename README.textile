@@ -1,3 +1,10 @@
+h1. This Fork
+
+*Warning:* This fork is based on a snapshot of Satchless before it underwent large-scale changes, abstracting away from Django towards making it a lower level Python framework. This fork is intended for my own small compatibility changes and maintenance. For new Django-based projects, I recommend checking out the "Saleor":https://github.com/mirumee/saleor project based on current low-level "Satchless":https://github.com/mirumee/satchless.
+
+The original readme follows below.
+
+
 h1. Satchless: less is mo'
 
 *Warning:* Currently Satchless is in an early stage of development. It is already possible to build a shop on top of it, but still you should be prepared for radical and backward-incompatible changes to the code.
