@@ -1,6 +1,6 @@
-h1. This Fork
+h1. This Branch
 
-*Warning:* This fork is based on a snapshot of Satchless before it underwent large-scale changes, abstracting away from Django towards making it a lower level Python framework. This fork is intended for my own small compatibility changes and maintenance. For new Django-based projects, I recommend checking out the "Saleor":https://github.com/mirumee/saleor project based on current low-level "Satchless":https://github.com/mirumee/satchless.
+*Warning:* This branch is based on a snapshot of Satchless before it underwent large-scale changes, abstracting away from Django towards making it a lower level Python framework. This branch is intended for my own small compatibility changes and maintenance. For new Django-based projects, I recommend checking out the "Saleor":https://github.com/mirumee/saleor project based on current low-level "Satchless":https://github.com/mirumee/satchless.
 
 The original readme follows below.
 
